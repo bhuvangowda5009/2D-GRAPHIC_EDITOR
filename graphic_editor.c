@@ -4,8 +4,10 @@
 char pict[row][col];
 void clear_garbage_val();
 void display_the_pic();
+void diagonal_line();
 int main(){
     clear_garbage_val();
+    diagonal_line();
     display_the_pic();
     return 0;
 }
@@ -22,5 +24,10 @@ void display_the_pic(){
             printf("%c",pict[i][j]);
         }
         printf("\n");
+    }
+}
+void diagonal_line(){
+    for(int i=0;i<12;i++){
+        pict[i][i]='*';
     }
 }
