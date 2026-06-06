@@ -6,10 +6,13 @@ void clear_garbage_val();
 void display_the_pic();
 void diagonal_line();
 void rectangle();
+void square();
+
 int main(){
     clear_garbage_val();
     diagonal_line();
     rectangle();
+   square();
     display_the_pic();
     return 0;
 }
@@ -47,4 +50,20 @@ void rectangle(){
         pict[i][30]='*';
     }
 
+}
+void square(){
+    for(int i=15;i<=27;i++){
+        pict[2][i]='*';
+    }
+    for(int i=15;i<=27;i++){
+        pict[7][i]='*';
+    }
+    
+    for(int i=2;i<=7;i++){
+        pict[i][15]='*';
+    }
+    
+    for(int i=2;i<=7;i++){
+        pict[i][27]='*';
+    }
 }
