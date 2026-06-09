@@ -10,11 +10,31 @@ void square();
 void circle();
 
 int main(){
+    int choice;
+    printf("\n2D_GRAPHIC_EDITOR\n");
+    printf("1.diagonal_Line\n");
+    printf("2.rectangle\n");
+    printf("3.suare\n");
+    printf("4.circle\n");
+    printf("Enter your choice :\n");
+    scanf("%d",&choice);
+
     clear_garbage_val();
+   switch(choice)
+   {
+    case 1:
     diagonal_line();
+    break;
+    case 2:
     rectangle();
-   square();
-   circle();
+    break;
+    case 3:
+    square();
+    break;
+    case 4:
+    circle();
+    break;
+   }
     display_the_pic();
     return 0;
 }
