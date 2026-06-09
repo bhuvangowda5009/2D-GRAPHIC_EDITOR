@@ -34,6 +34,8 @@ int main(){
     case 4:
     circle();
     break;
+    default:
+    printf("Invalid choice.\n");
    }
     display_the_pic();
     return 0;
@@ -59,18 +61,25 @@ void diagonal_line(){
     }
 }
 void rectangle(){
-    for(int i=13;i<=30;i++){
-        pict[13][i]='*';
-    }
-    for(int i=13;i<=30;i++){
-        pict[17][i]='*';
-    }
-    for(int i=13;i<=17;i++){
-        pict[i][13]='*';
-    }
-    for(int i=13;i<=17;i++){
-        pict[i][30]='*';
-    }
+  int r1,c1;
+  int len,wid;
+  printf("enter the row to start:\n");
+  scanf("%d",&r1);
+  printf("enter the col tp start:\n");
+  scanf("%d",&c1);
+  printf("Ente the length od the rect:\n");
+  scanf("%d",&len);
+  printf("ENter the wid of the rect:\n");
+  scanf("%d",&wid);
+  for(int i=c1;i<c1+len;i++){
+    pict[r1][i]='*';
+    pict[r1+wid-1][i]='*';
+
+  }
+  for(int i=r1;i<r1+wid;i++){
+   pict[i][c1]='*';
+   pict[i][c1+len-1]='*';
+  }
 
 }
 void square(){
