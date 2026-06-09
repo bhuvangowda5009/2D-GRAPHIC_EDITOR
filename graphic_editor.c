@@ -90,32 +90,43 @@ void rectangle(){
 
 }
 void square(){
-    for(int i=15;i<=27;i++){
-        pict[2][i]='*';
-    }
-    for(int i=15;i<=27;i++){
-        pict[7][i]='*';
-    }
-    
-    for(int i=2;i<=7;i++){
-        pict[i][15]='*';
-    }
-    
-    for(int i=2;i<=7;i++){
-        pict[i][27]='*';
-    }
+  int r1,c1;
+  int len;
+  printf("Enter the row no to start:\n");
+  scanf("%d",&r1);
+  printf("enter the col number to start:\n");
+   scanf("%d",&c1);
+  printf("Enter the length of side:\n");
+  scanf("%d",&len);
+  for(int i=c1;i<c1+len;i++){
+    pict[r1][i]='*';
+  }
+  for(int i=c1;i<c1+len;i++){
+    pict[r1+len-1][i]='*';
+  }
+  for(int i=r1;i<r1+len;i++){
+    pict[i][c1]='*';
+  }
+  for(int i=r1;i<r1+len;i++){
+    pict[i][c1+len-1]='*';
+  }
+
 }
 void circle(){
-    for(int i=42;i<=44;i++){
-        pict[20][i]='*';
-    }
-    for(int i=42;i<=44;i++){
-        pict[24][i]='*';
-    }
-    pict[21][41]='*';
-    pict[21][45]='*';
-    pict[22][40]='*';
-    pict[22][46]='*';
-    pict[23][41]='*';
-    pict[23][45]='*';
+    int r1,c1;
+    printf("enter the row and col to start:\n");
+    scanf("%d %d",&r1,&c1);
+    pict[r1-2][c1-1]='*';
+    pict[r1-2][c1]='*';
+    pict[r1-2][c1+1]='*';
+    pict[r1-1][c1-2]='*';
+    pict[r1-1][c1+2]='*';
+    pict[r1][c1-3]='*';
+    pict[r1][c1+3]='*';
+    pict[r1+1][c1-2]='*';
+    pict[r1+1][c1+2]='*';
+    pict[r1+2][c1-1]='*';
+    pict[r1+2][c1]='*';
+    pict[r1+2][c1+1]= '*';
+
 }
