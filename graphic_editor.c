@@ -56,8 +56,15 @@ void display_the_pic(){
     }
 }
 void diagonal_line(){
-    for(int i=0;i<12;i++){
-        pict[i][i]='*';
+    int r1,c1,len;
+    printf("enter the row to start:\n");
+    scanf("%d",&r1);
+    printf("enter the clo to start:\n");
+    scanf("%d",&c1);
+    printf("enter the length  of the digonal line :\n");
+    scanf("%d",&len);
+    for(int i=0;i<len;i++){
+        pict[r1+i][c1+i]='*';
     }
 }
 void rectangle(){
