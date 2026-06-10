@@ -8,6 +8,7 @@ void diagonal_line();
 void rectangle();
 void square();
 void circle();
+void straightline();
 
 int main(){
     int choice;
@@ -16,6 +17,7 @@ int main(){
     printf("2.rectangle\n");
     printf("3.suare\n");
     printf("4.circle\n");
+    printf("5.straight line\n");
     printf("Enter your choice :\n");
     scanf("%d",&choice);
 
@@ -33,6 +35,9 @@ int main(){
     break;
     case 4:
     circle();
+    break;
+    case 5:
+    straightline();
     break;
     default:
     printf("Invalid choice.\n");
@@ -129,4 +134,19 @@ void circle(){
     pict[r1+2][c1]='*';
     pict[r1+2][c1+1]= '*';
 
+}
+void straightline()
+{
+    int r1, c1, len;
+    printf("Enter the row to start:\n");
+    scanf("%d",&r1);
+    printf("Enter the col to start:\n");
+    scanf("%d",&c1); 
+    printf("Enter the  length of line: ");
+    scanf("%d", &len);
+
+    for(int i = c1; i < c1 + len; i++)
+    {
+        pict[r1][i] = '*';
+    }
 }
